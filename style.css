@@ -1,0 +1,594 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+    max-width: device-width;
+    font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+    font-size: 100%;
+    font-weight: normal;
+    color: #333333;
+    -webkit-text-size-adjust: none;
+}
+
+@font-face {
+  font-family: UserHelvetica;
+  src: url(./fonts/Helvetica.ttf);
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+ol, ul {
+  list-style-position: inside;
+  padding: 0;
+    max-width: 1080px;
+}
+
+li:not(:last-child) {
+/*    margin-bottom: 1em;*/
+    margin-bottom: 1em
+}
+
+li.halfmargin {
+    margin-bottom: 0.5em;   
+}
+
+li.quartermargin {
+    margin-bottom: 0.25em;   
+}
+
+li.nomargin {
+    margin-bottom: 0em;   
+}
+
+ol.papers, ul.papers {
+    list-style: none;
+    list-style-type: disc;
+    padding: 0;
+    margin-left: 1.5em;
+    max-width: 1080px;
+}
+
+ol.papers2 {
+    list-style: none;
+    list-style-type: decimal;
+    padding: 0;
+    margin-left: 1.5em;
+    max-width: 1080px;
+}
+
+ul.papers2 {
+    list-style: none;
+    list-style-position: inside;
+    padding: 0;
+    max-width: 1080px;
+}
+
+li::marker {
+  color: #333333;
+}
+
+/* Set core root defaults */
+html {
+    background: #fff;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.25;
+/*    max-width: 1080px;*/
+/*    margin: auto;    */
+/*    margin: 1.5em;    */
+    margin-top: max(1.5em, 2.5%);
+    margin-bottom: max(1.5em, 2.5%);
+    margin-left: max(1.5em, 2.5%);
+    margin-right: max(1.5em, 2.5%);
+}
+
+/* Set header */
+header {
+    position: -webkit-sticky;
+    position: sticky; 
+    top: max(1.5em, 2.5%);
+/*    top: max(1.5em, 5%);*/
+    z-index:1;
+}
+
+/* Set core h defaults */
+h1 {
+    font-weight:bold; 
+    z-index:2;
+}
+
+h2 {
+    font-weight:bold; 
+/*    margin-top: 4em;*/
+/*    margin-top: max(4.5em, 7.5%);*/
+    margin-top: max(4.5em, 7.5%);
+    z-index:3;
+}
+
+h3 {
+/*    margin-top: 1em;*/
+/*    margin-top: max(3em, 5%);*/
+    font-weight:bold; 
+    margin-top: 3em;
+    z-index:4;
+}
+
+h4 {
+/*    margin-top: 1em;*/
+/*    margin-top: max(3em, 5%);*/
+    font-weight:bold; 
+    margin-top: 1em;
+    z-index:5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* unvisited link */
+a:link {
+    color: #333333;
+    text-decoration:underline; 
+    text-underline-offset: 0.125em;       
+}
+
+/* visited link */
+a:visited {
+    color: #333333;
+    text-decoration:underline; 
+    text-underline-offset: 0.125em;       
+}
+
+/* mouse over link */
+a:hover {
+    color: #333333;
+    text-decoration: none;
+}
+
+/* selected link */
+a:active {
+    color: #cccccc;
+    text-decoration: none;
+}
+
+a.menu:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* unvisited link */
+a.menu:link {
+    color: #cccccc;
+    text-decoration: none;
+}
+
+/* visited link */
+a.menu:visited {
+    color: #cccccc;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a.menu:hover {
+    color: #333333;
+    text-decoration: none;
+/*    text-decoration:underline; */
+/*    text-underline-offset: 0.125em;   */
+}
+
+/* selected link */
+a.menu:active {
+    color: #333333;
+    text-decoration: none;
+}
+
+a.menunow:not([class]) {
+    text-decoration-skip-ink: auto;
+/*    text-underline-offset: 0.125em;   */
+}
+
+/* unvisited link */
+a.menunow:link {
+    color: #333333;
+    text-decoration: none;
+/*    text-decoration:underline; */
+/*    text-underline-offset: 0.125em;   */
+}
+
+/* visited link */
+a.menunow:visited {
+    color: #333333;
+    text-decoration: none;
+/*    text-decoration:underline; */
+/*    text-underline-offset: 0.125em;   */
+}
+
+/* mouse over link */
+a.menunow:hover {
+    color: #333333;
+    text-decoration: none;
+/*    text-decoration:underline; */
+/*    text-underline-offset: 0.125em;   */
+}
+
+/* selected link */
+a.menunow:active {
+    color: #333333;
+    text-decoration: none;
+/*    text-decoration:underline; */
+/*    text-underline-offset: 0.125em;   */
+}
+
+a.list:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* unvisited link */
+a.list:link {
+    color: #333333;
+    text-decoration:underline; 
+    text-underline-offset: 0.125em;   
+}
+
+/* visited link */
+a.list:visited {
+    color: #333333;
+    text-decoration:underline; 
+    text-underline-offset: 0.125em;   
+}
+
+/* mouse over link */
+a.list:hover {
+    color: #949494;
+    text-decoration:underline; 
+    text-underline-offset: 0.125em;   
+}
+
+/* selected link */
+a.list:active {
+    color: #333333;
+    text-decoration:underline; 
+    text-underline-offset: 0.125em;   
+}
+
+a.subtext:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* unvisited link */
+a.subtext:link {
+    color: #949494;
+    text-decoration:none; 
+}
+
+/* visited link */
+a.subtext:visited {
+    color: #949494;
+    text-decoration:none; 
+}
+
+/* mouse over link */
+a.subtext:hover {
+    color: #333333;
+    text-decoration: none;
+}
+
+/* selected link */
+a.subtext:active {
+    color: #949494;
+    text-decoration:none; 
+}
+
+p.subtext {
+    color: #949494;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+video {
+    max-height: 75vh;    
+    max-width: 100%;
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;    
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+  }
+}
+
+/* Set additional styling options for the columns */
+.column {
+    float: left;
+}
+
+/* Set width length for the left, right and middle columns */
+.left {
+    width: 33.3%;
+}
+
+.middle {
+    width: 33.3%;
+}
+
+.right {
+    width: 33.3%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+hr.black { 
+    border:0; 
+    border-top: 1px solid black; 
+    margin-left: -2em;
+    margin-right: -2em;
+    margin-bottom: -1em;
+    margin-top: 2em;
+}
+
+.entrytop {
+/*    margin-top: 1em;*/
+/*    margin-bottom: 1em;*/
+    margin-top: 1em;
+    margin-bottom: 1em;
+    max-width: 1080px;
+}
+
+.entrysolo {
+/*    margin-top: 4em;*/
+    margin-top: 0em;
+    margin-bottom: 0em;
+    max-width: 1080px;
+}
+
+.entry {
+/*    margin-bottom: 1em;*/
+    margin-bottom: 1em;
+    max-width: 1080px;
+}
+
+details > summary { 
+    cursor: pointer;
+/*    list-style-type: "+ ";*/
+/*    list-style-type: "↓ ";*/
+/*    list-style-type: "↘ ";*/
+}
+
+details[open] > summary { 
+    cursor: pointer;
+/*    list-style-type: "− ";*/
+/*    list-style-type: "↑ ";*/
+/*    list-style-type: "↖ ";*/
+    color:#333333;
+}
+
+summary{
+    color:#949494;
+/*    color:#333333;*/
+}
+
+summary:hover{
+/*    color:#949494;*/
+    color:#333333;
+}
+
+.text-animation {
+    background-image: 
+    linear-gradient(to right, #333333, #949494, #ffffff, #949494, #333333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  
+    animation: bw-animation 1000s linear infinite;
+}
+
+@keyframes bw-animation {
+    to {
+        background-position: 4500vh;
+    }
+}
+
+p.animation {
+    -webkit-animation: color-change 30s infinite;
+    -moz-animation: color-change 30s infinite;
+    -o-animation: color-change 30s infinite;
+    -ms-animation: color-change 30s infinite;
+    animation: color-change 30s infinite;
+}
+
+@-webkit-keyframes color-change {
+    0% { color: #949494; }
+    50% { color: #ffffff; }
+    100% { color: #949494; }
+}
+@-moz-keyframes color-change {
+    0% { color: #949494; }
+    50% { color: #ffffff; }
+    100% { color: #949494; }
+}
+@-ms-keyframes color-change {
+    0% { color: #949494; }
+    50% { color: #ffffff; }
+    100% { color: #949494; }
+}
+@-o-keyframes color-change {
+    0% { color: #949494; }
+    50% { color: #ffffff; }
+    100% { color: #949494; }
+}
+@keyframes color-change {
+    0% { color: #949494; }
+    50% { color: #ffffff; }
+    100% { color: #949494; }
+}
+
+.astext {
+    background:transparent;
+    border:none;
+    margin:0;
+    padding:0;
+    cursor: pointer;
+}
+
+button .yeshover {
+    color: #333333;
+    display: none;
+}
+
+button:hover .nohover {
+    color: #333333;
+    display: none;
+}
+
+button:hover .yeshover {
+    color: #333333;
+    display: inline;
+}
+
+.hover-title {
+    display: inline;
+    pointer-events: auto;
+    cursor: text;
+}
+
+.hover-image {
+    visibility: hidden;
+}
+
+body:not(.mobile) .hover-title:hover + .hover-image {
+    visibility: visible;
+    pointer-events: none;
+}
+
+.hover-image {
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    pointer-events: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+/* Change width and height to scale images */
+    width: 90vw;
+    height: 90vh;
+}
+
+.hover-image img {
+    max-width: 100% !important;
+    max-height: 100% !important;
+    width: auto !important;
+    height: auto !important;
+    margin-bottom: 0;
+}
+
+.collapsible {
+    background-color: transparent;
+    color: #333333;
+    cursor: pointer;
+    padding: 0px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 100%;
+    margin-top: 0em;
+    margin-bottom: 0em;
+    text-decoration:underline; 
+    text-underline-offset: 0.125em;   
+}
+
+.collapsible:hover {
+    color: #333333;
+    text-decoration: none;
+}        
+
+.active {    
+/*    color: #cccccc;*/
+/*    mix-blend-mode: exclusion;*/
+}
+
+.active:after {
+    display: inline-block;
+}
+
+.mainitem {
+    margin-bottom: 0.25em;
+}
+
+.subitem {
+/*    color: #cccccc;*/
+/*    mix-blend-mode: exclusion;*/
+}
+
+.content {
+    padding: 0 0px;
+    display: none;
+    overflow: hidden;
+    margin-top: 0.25em;
+    margin-bottom: 0em;
+    color: #333333;
+    max-width: 1080px;
+}     
+
+.contentfull {
+    padding: 0 0px;
+    display: none;
+    overflow: hidden;
+    margin-top: 1em;
+    margin-bottom: 0em;
+    color: #333333;
+    max-width: 1080px;
+}      
