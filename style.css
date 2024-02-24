@@ -568,11 +568,6 @@ body:not(.mobile) .hover-title:hover + .hover-image {
     margin-bottom: 0.25em;
 }
 
-.subitem {
-/*    color: #cccccc;*/
-/*    mix-blend-mode: exclusion;*/
-}
-
 .content {
     padding: 0 0px;
     display: none;
