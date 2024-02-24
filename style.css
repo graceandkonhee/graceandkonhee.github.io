@@ -103,10 +103,10 @@ body {
 /*    max-width: 1080px;*/
 /*    margin: auto;    */
 /*    margin: 1.5em;    */
-    margin-top: max(1.5em, 2.5%);
-    margin-bottom: max(1.5em, 2.5%);
-    margin-left: max(1.5em, 2.5%);
-    margin-right: max(1.5em, 2.5%);
+    margin-top: max(1.5em, 5%);
+    margin-bottom: max(1.5em, 5%);
+    margin-left: max(1.5em, 5%);
+    margin-right: max(1.5em, 5%);
 }
 
 /* Set header */
@@ -209,112 +209,11 @@ a.menu:active {
     text-decoration: none;
 }
 
-a.menunow:not([class]) {
-    text-decoration-skip-ink: auto;
-/*    text-underline-offset: 0.125em;   */
-}
-
-/* unvisited link */
-a.menunow:link {
-    color: #333333;
-    text-decoration: none;
-/*    text-decoration:underline; */
-/*    text-underline-offset: 0.125em;   */
-}
-
-/* visited link */
-a.menunow:visited {
-    color: #333333;
-    text-decoration: none;
-/*    text-decoration:underline; */
-/*    text-underline-offset: 0.125em;   */
-}
-
-/* mouse over link */
-a.menunow:hover {
-    color: #333333;
-    text-decoration: none;
-/*    text-decoration:underline; */
-/*    text-underline-offset: 0.125em;   */
-}
-
-/* selected link */
-a.menunow:active {
-    color: #333333;
-    text-decoration: none;
-/*    text-decoration:underline; */
-/*    text-underline-offset: 0.125em;   */
-}
-
-a.list:not([class]) {
-    text-decoration-skip-ink: auto;
-}
-
-/* unvisited link */
-a.list:link {
-    color: #333333;
-    text-decoration:underline; 
-    text-underline-offset: 0.125em;   
-}
-
-/* visited link */
-a.list:visited {
-    color: #333333;
-    text-decoration:underline; 
-    text-underline-offset: 0.125em;   
-}
-
-/* mouse over link */
-a.list:hover {
-    color: #949494;
-    text-decoration:underline; 
-    text-underline-offset: 0.125em;   
-}
-
-/* selected link */
-a.list:active {
-    color: #333333;
-    text-decoration:underline; 
-    text-underline-offset: 0.125em;   
-}
-
-a.subtext:not([class]) {
-    text-decoration-skip-ink: auto;
-}
-
-/* unvisited link */
-a.subtext:link {
-    color: #949494;
-    text-decoration:none; 
-}
-
-/* visited link */
-a.subtext:visited {
-    color: #949494;
-    text-decoration:none; 
-}
-
-/* mouse over link */
-a.subtext:hover {
-    color: #333333;
-    text-decoration: none;
-}
-
-/* selected link */
-a.subtext:active {
-    color: #949494;
-    text-decoration:none; 
-}
-
-p.subtext {
-    color: #949494;
-}
-
 /* Make images easier to work with */
 img,
 picture,
 video {
-    max-height: 75vh;    
+    max-height: 640px;    
     max-width: 100%;
     display: block;
     margin-top: 1em;
@@ -345,139 +244,23 @@ select {
   }
 }
 
-/* Set additional styling options for the columns */
-.column {
-    float: left;
-}
-
-/* Set width length for the left, right and middle columns */
-.left {
-    width: 33.3%;
-}
-
-.middle {
-    width: 33.3%;
-}
-
-.right {
-    width: 33.3%;
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-hr.black { 
-    border:0; 
-    border-top: 1px solid black; 
-    margin-left: -2em;
-    margin-right: -2em;
-    margin-bottom: -1em;
-    margin-top: 2em;
-}
-
-.entrytop {
+.entrytopnarrow {
 /*    margin-top: 1em;*/
 /*    margin-bottom: 1em;*/
     margin-top: 1em;
     margin-bottom: 1em;
-    max-width: 1080px;
+    max-width: 640px;
 }
 
-.entrysolo {
-/*    margin-top: 4em;*/
-    margin-top: 0em;
-    margin-bottom: 0em;
-    max-width: 1080px;
+.entryinline {
+    display: inline-block;
+    max-width: 640px;
 }
 
-.entry {
+.entrynarrow {
 /*    margin-bottom: 1em;*/
     margin-bottom: 1em;
-    max-width: 1080px;
-}
-
-details > summary { 
-    cursor: pointer;
-/*    list-style-type: "+ ";*/
-/*    list-style-type: "↓ ";*/
-/*    list-style-type: "↘ ";*/
-}
-
-details[open] > summary { 
-    cursor: pointer;
-/*    list-style-type: "− ";*/
-/*    list-style-type: "↑ ";*/
-/*    list-style-type: "↖ ";*/
-    color:#333333;
-}
-
-summary{
-    color:#949494;
-/*    color:#333333;*/
-}
-
-summary:hover{
-/*    color:#949494;*/
-    color:#333333;
-}
-
-.text-animation {
-    background-image: 
-    linear-gradient(to right, #333333, #949494, #ffffff, #949494, #333333);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;  
-    animation: bw-animation 1000s linear infinite;
-}
-
-@keyframes bw-animation {
-    to {
-        background-position: 4500vh;
-    }
-}
-
-p.animation {
-    -webkit-animation: color-change 30s infinite;
-    -moz-animation: color-change 30s infinite;
-    -o-animation: color-change 30s infinite;
-    -ms-animation: color-change 30s infinite;
-    animation: color-change 30s infinite;
-}
-
-@-webkit-keyframes color-change {
-    0% { color: #949494; }
-    50% { color: #ffffff; }
-    100% { color: #949494; }
-}
-@-moz-keyframes color-change {
-    0% { color: #949494; }
-    50% { color: #ffffff; }
-    100% { color: #949494; }
-}
-@-ms-keyframes color-change {
-    0% { color: #949494; }
-    50% { color: #ffffff; }
-    100% { color: #949494; }
-}
-@-o-keyframes color-change {
-    0% { color: #949494; }
-    50% { color: #ffffff; }
-    100% { color: #949494; }
-}
-@keyframes color-change {
-    0% { color: #949494; }
-    50% { color: #ffffff; }
-    100% { color: #949494; }
-}
-
-.astext {
-    background:transparent;
-    border:none;
-    margin:0;
-    padding:0;
-    cursor: pointer;
+    max-width: 640px;
 }
 
 button .yeshover {
@@ -516,7 +299,7 @@ body:not(.mobile) .hover-title:hover + .hover-image {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: -1;
+    z-index: 1;
     pointer-events: none;
     flex-direction: column;
     align-items: center;
@@ -563,27 +346,3 @@ body:not(.mobile) .hover-title:hover + .hover-image {
 .active:after {
     display: inline-block;
 }
-
-.mainitem {
-    margin-bottom: 0.25em;
-}
-
-.content {
-    padding: 0 0px;
-    display: none;
-    overflow: hidden;
-    margin-top: 0.25em;
-    margin-bottom: 0em;
-    color: #333333;
-    max-width: 1080px;
-}     
-
-.contentfull {
-    padding: 0 0px;
-    display: none;
-    overflow: hidden;
-    margin-top: 1em;
-    margin-bottom: 0em;
-    color: #333333;
-    max-width: 1080px;
-}      
