@@ -346,3 +346,51 @@ body:not(.mobile) .hover-title:hover + .hover-image {
 .active:after {
     display: inline-block;
 }
+
+.dropbtn {
+    background-color: transparent;
+    color: #333333;
+    cursor: pointer;
+    padding: 0px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 100%;
+    margin-top: 0em;
+    margin-bottom: 0em;
+    text-decoration:underline; 
+    text-underline-offset: 0.125em;   
+}
+
+.dropbtn:hover {
+    color: #333333;
+    text-decoration: none;
+}      
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #333333;
+    min-width: 200px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin-top: 0.5em;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    padding: 6px 8px;
+    text-decoration: none;
+    display: block;
+    color:#333333;
+}
+
+.dropdown a:hover {background-color: #e3e3e3;}
+
+.show {display: block;}
